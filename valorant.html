@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valorant Fan Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #0f1923;
+      color: #ece8e1;
+    }
+    .text-red { color: #ff4655; }
+    .card {
+      background-color: #1f2f3f;
+      border: 1px solid #ff4655;
+      color: #ece8e1;
+    }
+    .navbar-brand { color: #ff4655 !important; font-weight: bold; font-size: 1.5rem; }
+    .nav-link { color: #ece8e1 !important; }
+    .nav-link:hover { color: #ff4655 !important; }
+    .modal-content { background-color: #1f2f3f; color: #ece8e1; }
+    .accordion-item { background-color: #1f2f3f; border-color: #ff4655; color: #ece8e1; }
+    .accordion-button { background-color: #1f2f3f !important; color: #ece8e1 !important; }
+    .accordion-button:not(.collapsed) { color: #ff4655 !important; }
+    .form-control, .form-select { background-color: #0f1923; color: #ece8e1; border-color: #ff4655; }
+    .form-control::placeholder { color: #7a8b99; }
+    .form-label { color: #ff4655; }
+    section { padding: 60px 0; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">VALORANT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#maps">Maps</a></li>
+        <li class="nav-item"><a class="nav-link" href="#agents">Agents</a></li>
+        <li class="nav-item"><a class="nav-link" href="#guns">Guns</a></li>
+        <li class="nav-item"><a class="nav-link" href="#signup">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-3">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>New Agent Alert:</strong> Clove has joined the Protocol. Check the Agents section!
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+</div>
+
+<section class="text-center">
+  <div class="container">
+    <h1 class="display-3 fw-bold">Welcome to <span class="text-red">VALORANT</span></h1>
+    <p class="lead text-secondary">A 5v5 tactical shooter where your teammates will decide your mental state for the entire rest of the day.</p>
+    <button class="btn btn-danger btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#agentModal">
+      Meet My Favorite Agent
+    </button>
+  </div>
+</section>
+
+<section id="maps" style="padding: 40px 0;">
+  <div class="container">
+    <h2 class="text-red mb-4">Maps</h2>
+    <div id="mapsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mapsCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner rounded">
+        <div class="carousel-item active">
+          <img src="https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/splash.png" class="d-block w-100" style="height:350px; object-fit:cover;" alt="Icebox">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Icebox ❄ — My Favorite Map</h5>
+            <p>Arctic setting with ziplines and insane vertical angles.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/splash.png" class="d-block w-100" style="height:350px; object-fit:cover;" alt="Bind">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Bind</h5>
+            <p>Two one-way teleporters. No middle ground.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png" class="d-block w-100" style="height:350px; object-fit:cover;" alt="Ascent">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ascent</h5>
+            <p>Open mid control is key on this Italian-inspired map.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mapsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mapsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 40px 0; background-color: #0a131c;">
+  <div class="container">
+    <h2 class="text-red mb-4">All Maps</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/splash.png" class="card-img-top" style="height:160px; object-fit:cover;" alt="Icebox">
+          <div class="card-body">
+            <h5 class="card-title text-red">Icebox ❄ <span class="badge bg-danger ms-1">Fave</span></h5>
+            <p class="card-text">Arctic research station with ziplines and vertical gameplay.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/splash.png" class="card-img-top" style="height:160px; object-fit:cover;" alt="Bind">
+          <div class="card-body">
+            <h5 class="card-title">Bind</h5>
+            <p class="card-text">Morocco-inspired map with teleporters connecting key areas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/splash.png" class="card-img-top" style="height:160px; object-fit:cover;" alt="Haven">
+          <div class="card-body">
+            <h5 class="card-title">Haven</h5>
+            <p class="card-text">The only map with three bomb sites — spreads defenders thin.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png" class="card-img-top" style="height:160px; object-fit:cover;" alt="Ascent">
+          <div class="card-body">
+            <h5 class="card-title">Ascent</h5>
+            <p class="card-text">Floating city above Venice. Mid control wins rounds.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png" class="card-img-top" style="height:160px; object-fit:cover;" alt="Split">
+          <div class="card-body">
+            <h5 class="card-title">Split</h5>
+            <p class="card-text">Japan-inspired map with ropes and tight corridors.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/splash.png" class="card-img-top" style="height:160px; object-fit:cover;" alt="Fracture">
+          <div class="card-body">
+            <h5 class="card-title">Fracture</h5>
+            <p class="card-text">H-shaped layout with ziplines — attackers come from both sides.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="container">
+    <h2 class="text-red mb-4">Agents</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-center p-3 h-100">
+          <img src="https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/displayicon.png" class="mx-auto mb-2" style="width:90px; height:90px; object-fit:cover; border-radius:50%; border:2px solid #ff4655;" alt="Clove">
+          <h5>Clove <span class="badge bg-danger">My Fave</span></h5>
+          <span class="badge bg-secondary mb-2">Controller</span>
+          <p class="small text-secondary">Scotland's undead agent. Can use abilities even after death and get a second life with their ult.</p>
+          <button class="btn btn-outline-danger btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#agentModal">View Details</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3 h-100">
+          <img src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png" class="mx-auto mb-2" style="width:90px; height:90px; object-fit:cover; border-radius:50%; border:2px solid #555;" alt="Jett">
+          <h5>Jett</h5>
+          <span class="badge bg-secondary mb-2">Duelist</span>
+          <p class="small text-secondary">Korea's fastest agent. Dash and float to outmaneuver every opponent.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3 h-100">
+          <img src="https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png" class="mx-auto mb-2" style="width:90px; height:90px; object-fit:cover; border-radius:50%; border:2px solid #555;" alt="Sage">
+          <h5>Sage</h5>
+          <span class="badge bg-secondary mb-2">Sentinel</span>
+          <p class="small text-secondary">China's healer. Walls, slows, heals, and a full resurrection ultimate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guns" style="background-color: #0a131c;">
+  <div class="container">
+    <h2 class="text-red mb-4">Arsenal</h2>
+    <div class="row align-items-center g-4">
+      <div class="col-md-5 text-center">
+        <img src="https://media.valorant-api.com/weapons/a03b24d3-4319-996d-0f8c-94bbfba1dfc7/displayicon.png"
+          class="img-fluid mb-3" style="max-height:140px; filter:drop-shadow(0 0 10px #ff4655);" alt="Operator"/>
+        <h4>Operator <span class="badge bg-danger">My Fave</span></h4>
+        <p class="text-secondary small">4700 CR — Sniper Rifle</p>
+      </div>
+      <div class="col-md-7">
+        <p class="mb-3">The most powerful and feared weapon in Valorant. One shot, one kill at any range.</p>
+        <div class="mb-2">
+          <div class="d-flex justify-content-between"><small>Body Damage</small><small>150</small></div>
+          <div class="progress" style="height:8px;"><div class="progress-bar bg-danger" style="width:85%"></div></div>
+        </div>
+        <div class="mb-2">
+          <div class="d-flex justify-content-between"><small>Head Damage</small><small>255</small></div>
+          <div class="progress" style="height:8px;"><div class="progress-bar bg-danger" style="width:100%"></div></div>
+        </div>
+        <div class="mb-2">
+          <div class="d-flex justify-content-between"><small>Fire Rate</small><small>Low</small></div>
+          <div class="progress" style="height:8px;"><div class="progress-bar bg-danger" style="width:20%"></div></div>
+        </div>
+        <div class="mb-2">
+          <div class="d-flex justify-content-between"><small>Mag Size</small><small>5</small></div>
+          <div class="progress" style="height:8px;"><div class="progress-bar bg-danger" style="width:25%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="mt-5 mb-3">Other Weapons</h5>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-3">
+          <img src="https://media.valorant-api.com/weapons/9c82e19d-4575-0200-1a81-3eacf00cf872/displayicon.png" style="height:50px; object-fit:contain;" alt="Vandal"/>
+          <p class="mt-2 mb-0 fw-bold">Vandal</p>
+          <small class="text-secondary">Rifle • 2900 CR</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-3">
+          <img src="https://media.valorant-api.com/weapons/ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a/displayicon.png" style="height:50px; object-fit:contain;" alt="Phantom"/>
+          <p class="mt-2 mb-0 fw-bold">Phantom</p>
+          <small class="text-secondary">Rifle • 2900 CR</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-3">
+          <img src="https://media.valorant-api.com/weapons/c4883e50-4494-202c-3ec3-6b8a9284f00b/displayicon.png" style="height:50px; object-fit:contain;" alt="Marshal"/>
+          <p class="mt-2 mb-0 fw-bold">Marshal</p>
+          <small class="text-secondary">Sniper • 950 CR</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-3">
+          <img src="https://media.valorant-api.com/weapons/e336c6b8-418d-9340-d77f-7a9e4cfe0702/displayicon.png" style="height:50px; object-fit:contain;" alt="Sheriff"/>
+          <p class="mt-2 mb-0 fw-bold">Sheriff</p>
+          <small class="text-secondary">Sidearm • 800 CR</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="text-red mb-4">FAQ</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+            Why is Icebox my favorite map?
+          </button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            Icebox has the most unique layout in the game. The ziplines, boxes, and vertical angles on B-site reward mechanical skill and creative play. It's punishing but extremely satisfying.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+            Why do I main Clove?
+          </button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            Clove is the most unique controller in the game. Being able to smoke after death and potentially come back with their ult changes how you play the end of rounds entirely.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+            Is the Operator worth buying every round?
+          </button>
+        </h2>
+        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-secondary">
+            At 4700 credits it's expensive, but one kill essentially pays for itself in economy. On Icebox especially, the long angles make it the best gun in the game in the right hands.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="signup" style="background-color: #0a131c;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-red mb-4">Join the Protocol</h2>
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control" placeholder="Your IGN"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="youremail@gmail.com"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Favorite Agent</label>
+          <select class="form-select">
+            <option>Clove</option>
+            <option>Jett</option>
+            <option>Reyna</option>
+            <option>Sage</option>
+            <option>Omen</option>
+          </select>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="agree"/>
+          <label class="form-check-label" for="agree">I agree to the terms and conditions</label>
+        </div>
+        <button class="btn btn-danger w-100" id="submitBtn">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="agentModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-danger">
+        <h5 class="modal-title text-red">Clove — Agent Profile</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-3">
+          <img src="https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/displayicon.png"
+            style="width:100px; height:100px; border-radius:50%; border:2px solid #ff4655; object-fit:cover;" alt="Clove"/>
+        </div>
+        <p><strong class="text-red">Role:</strong> Controller</p>
+        <p><strong class="text-red">Origin:</strong> Scotland</p>
+        <p><strong class="text-red">Why I play Clove:</strong> She can smoke after death and potentially come back to life with her ult. No other agent does anything like it.</p>
+        <hr style="border-color:#ff4655;">
+        <p class="mb-1"><strong>Abilities:</strong></p>
+        <ul class="text-secondary small">
+          <li><strong class="text-light">Meddle (C)</strong> — Destabilizes an enemy's radianite briefly</li>
+          <li><strong class="text-light">Pick-Me-Up (Q)</strong> — Absorb a fallen enemy's soul for speed + health</li>
+          <li><strong class="text-light">Ruse (E)</strong> — Deploy smokes, even after death</li>
+          <li><strong class="text-light">Not Dead Yet (X)</strong> — Revive on death, must get a kill to survive</li>
+        </ul>
+      </div>
+      <div class="modal-footer border-danger">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-danger">Select Agent</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index:9999;">
+  <div id="signupToast" class="toast" role="alert">
+    <div class="toast-header bg-danger text-white">
+      <strong class="me-auto">Valorant</strong>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body bg-dark text-white">
+      You've been added to the Protocol. Welcome, Agent!
+    </div>
+  </div>
+</div>
+
+<footer class="text-center py-4 mt-4" style="background-color:#080f16; color:#555;">
+  <p class="mb-0">ADD ME: <span class="badge bg-danger">yuckmuck#ilysm</span>   PEAK RANK: ASCENDANT 3</p>
+  <small>Favorites: Icebox • Clove • Operator</small>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
